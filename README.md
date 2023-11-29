@@ -13,7 +13,8 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
     - [Node.js 🟢](#nodejs-)
     - [Multer 📦](#multer-)
   - [Principios SOLID 🏗️](#principios-solid-️)
-- [Documentación API: SWAGGER](#documentación-api-subida-de-archivos)
+  - [Cómo Empezar](#cómo-empezar)
+- [Documentación API SWAGGER](#documentación-api-swagger)
   - [Endpoint: `/upload/{id}`](#endpoint-uploadid)
     - [Método HTTP: `POST`](#método-http-post)
     - [Resumen](#resumen)
@@ -55,7 +56,7 @@ Este proyecto sigue los principios SOLID para garantizar un código limpio y man
 4. **I**nterface Segregation Principle (Principio de Segregación de la Interfaz)
 5. **D**ependency Inversion Principle (Principio de Inversión de Dependencias)
 
-# Documentación API: SWAGGER
+## Cómo Empezar
 
 Instrucciones sobre cómo configurar, instalar dependencias, y ejecutar el proyecto.
 
@@ -65,7 +66,7 @@ cd demo-swagger-bootcampcastilla
 npm install
 npm start 
 
-## Documentación de la API mediante Swagger
+## Documentación API: SWAGGER
 
 La API está documentada utilizando Swagger, lo que facilita la comprensión y el uso de los endpoints disponibles. Puedes acceder a la documentación de la API navegando a: 
 [http://localhost:3001/api-docs](http://localhost:3000/api-docs)
@@ -113,7 +114,7 @@ La API está documentada utilizando Swagger, lo que facilita la comprensión y e
  *         description: Error del servidor.
  */
 ```
-### Explicacion de pasos documentados
+# Documentación API: Subida de Archivos
 
 La siguiente sección documenta el endpoint `/upload/{id}` de nuestra API, utilizando la especificación de Swagger.
 
