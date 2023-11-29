@@ -20,6 +20,7 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
       - [Creación de la Especificación Swagger 📃](#creación-de-la-especificación-swagger-)
       - [Función de Configuración de Documentación 🚀](#función-de-configuración-de-documentación-)
       - [Exportación 📤](#exportación-)
+    - [Explicación de la documentacion dentro de  `app.js` 📄](#explicación-de-la-documentacion-dentro-de--appjs-)
   - [Endpoint: `/upload/{id}`](#endpoint-uploadid)
     - [Método HTTP: `POST`](#método-http-post)
     - [Resumen](#resumen)
@@ -27,7 +28,6 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
     - [Cuerpo de la Solicitud (Request Body)](#cuerpo-de-la-solicitud-request-body)
     - [Respuestas](#respuestas)
   - [Contribuir](#contribuir)
-  - [Licencia](#licencia)
 
 ## Introducción
 
@@ -253,6 +253,3 @@ Esta URL te llevará a una interfaz de usuario interactiva donde podrás ver y p
 
 Antes de enviar tu Pull Request, asegúrate de que tu código sigue los estándares establecidos y pasa todas las pruebas.
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia [NOMBRE DE LA LICENCIA] - ver el archivo [LICENSE.md](LICENSE.md) para detalles.
