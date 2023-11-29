@@ -60,7 +60,6 @@ Este proyecto sigue los principios SOLID para garantizar un código limpio y man
 
 Instrucciones sobre cómo configurar, instalar dependencias, y ejecutar el proyecto.
 
-```bash
 git clone https://github.com/wilmarcabezas/demo-swagger-bootcampcastilla.git
 cd demo-swagger-bootcampcastilla
 npm install
