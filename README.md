@@ -1,5 +1,5 @@
 # Demo Swagger Bootcamp Castilla
-Agradecimiento muy especial al desarrollador 💖 por [Nombre del Autor](https://github.com/wilmarcabezas)
+Agradecimiento muy especial al desarrollador Yorleder Gomez [(https://github.com/zFr0st2](https://github.com/zFr0st2) por publicar el repositorio con la explicacion del uso de Multer https://github.com/zFr0st2/multer-express-files <br>
 Este repositorio contiene una aplicación de demostración que integra Express, Swagger, Node.js, y Multer, siguiendo los principios SOLID. 🚀
 
 ## Contenido 📚
@@ -15,6 +15,11 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
   - [Principios SOLID 🏗️](#principios-solid-️)
   - [Cómo Empezar](#cómo-empezar)
   - [Documentación API: SWAGGER](#documentación-api-swagger)
+    - [Explicación del Archivo `swagger.js` 📄](#explicación-del-archivo-swaggerjs-)
+      - [Importaciones 📤](#importaciones-)
+      - [Creación de la Especificación Swagger 📃](#creación-de-la-especificación-swagger-)
+      - [Función de Configuración de Documentación 🚀](#función-de-configuración-de-documentación-)
+      - [Exportación 📤](#exportación-)
   - [Endpoint: `/upload/{id}`](#endpoint-uploadid)
     - [Método HTTP: `POST`](#método-http-post)
     - [Resumen](#resumen)
@@ -60,15 +65,85 @@ Este proyecto sigue los principios SOLID para garantizar un código limpio y man
 
 Instrucciones sobre cómo configurar, instalar dependencias, y ejecutar el proyecto.
 
-git clone https://github.com/wilmarcabezas/demo-swagger-bootcampcastilla.git
-cd demo-swagger-bootcampcastilla
-npm install
-npm start 
+```git clone https://github.com/wilmarcabezas/demo-swagger-bootcampcastilla.git```<br>
+```cd demo-swagger-bootcampcastilla```<br>
+```npm install```<br>
+```node app.js ```
+<br>
+<br>
 
 ## Documentación API: SWAGGER
 
+### Explicación del Archivo `swagger.js` 📄
+
+Este archivo `swagger.js` se utiliza para configurar la documentación de Swagger en un proyecto Node.js usando Express. A continuación, se detalla su contenido y funcionalidad:
+
+
+#### Importaciones 📤
+
+```javascript
+const swaggerJSDOC = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+````
+
+Estas líneas importan dos módulos esenciales:
+
+```swagger-jsdoc```: Genera especificaciones de Swagger/OpenAPI a partir de comentarios JSDoc en el código.<br>
+```swagger-ui-express```: Sirve la interfaz de usuario de Swagger para visualizar la documentación generada.
+
+
+```javascript
+const options = {
+    definition: {
+        openapi: "3.0.0",
+        info: {
+            title: "Api Multer Castilla",
+            version: "1.0.0",
+        }
+    },
+    apis: ['./app.js']
+}
+```
+En esta sección se definen las opciones de configuración de Swagger:
+
+```definition```: Contiene metadatos como la versión de OpenAPI y la información de la API.<br>
+```apis```: Un array que indica los archivos donde Swagger buscará para generar la documentación.
+
+#### Creación de la Especificación Swagger 📃
+
+```const swaggerSpec = swaggerJSDOC(options);```<br>
+Aquí se crea la especificación de Swagger utilizando las opciones definidas anteriormente.
+
+#### Función de Configuración de Documentación 🚀
+``` javascript
+const swaggerDocs = (app, port) => {
+    app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+}
+
+```
+
+Esta función configura un middleware en la aplicación Express para servir la documentación de Swagger. La documentación estará disponible en la ruta /doc.
+
+
+#### Exportación 📤
+``` javascript
+module.exports = { swaggerDocs }
+
+```
+
+Finalmente, se exporta la función swaggerDocs para su uso en otras partes de la aplicación.
+
+<br>
+<br>
+
+### Explicación de la documentacion dentro de  `app.js` 📄
+
+El codigo que genera la rutas de documentacion debe ser puesto antes de cada endpoint.
+
+
 La API está documentada utilizando Swagger, lo que facilita la comprensión y el uso de los endpoints disponibles. Puedes acceder a la documentación de la API navegando a: 
 [http://localhost:3001/api-docs](http://localhost:3000/api-docs)
+
 
 ```yaml
 /** 
