@@ -13,7 +13,7 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
     - [Node.js 🟢](#nodejs-)
     - [Multer 📦](#multer-)
   - [Principios SOLID 🏗️](#principios-solid-️)
-- [Documentación API: Subida de Archivos](#documentación-api-subida-de-archivos)
+- [Documentación API: SWAGGER](#documentación-api-subida-de-archivos)
   - [Endpoint: `/upload/{id}`](#endpoint-uploadid)
     - [Método HTTP: `POST`](#método-http-post)
     - [Resumen](#resumen)
@@ -55,7 +55,7 @@ Este proyecto sigue los principios SOLID para garantizar un código limpio y man
 4. **I**nterface Segregation Principle (Principio de Segregación de la Interfaz)
 5. **D**ependency Inversion Principle (Principio de Inversión de Dependencias)
 
-# Documentación API: Subida de Archivos
+# Documentación API: SWAGGER
 
 Instrucciones sobre cómo configurar, instalar dependencias, y ejecutar el proyecto.
 
