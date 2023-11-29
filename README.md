@@ -14,7 +14,7 @@ Este repositorio contiene una aplicación de demostración que integra Express, 
     - [Multer 📦](#multer-)
   - [Principios SOLID 🏗️](#principios-solid-️)
   - [Cómo Empezar](#cómo-empezar)
-- [Documentación API SWAGGER](#documentación-api-swagger)
+  - [Documentación API: SWAGGER](#documentación-api-swagger)
   - [Endpoint: `/upload/{id}`](#endpoint-uploadid)
     - [Método HTTP: `POST`](#método-http-post)
     - [Resumen](#resumen)
@@ -113,7 +113,6 @@ La API está documentada utilizando Swagger, lo que facilita la comprensión y e
  *         description: Error del servidor.
  */
 ```
-# Documentación API: Subida de Archivos
 
 La siguiente sección documenta el endpoint `/upload/{id}` de nuestra API, utilizando la especificación de Swagger.
 
@@ -182,6 +181,3 @@ Antes de enviar tu Pull Request, asegúrate de que tu código sigue los estánda
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia [NOMBRE DE LA LICENCIA] - ver el archivo [LICENSE.md](LICENSE.md) para detalles.
-
-
-
